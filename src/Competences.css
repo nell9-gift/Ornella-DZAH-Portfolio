@@ -1,0 +1,115 @@
+.competences {
+  padding: 80px 60px;
+  background-color: var(--rose-pale);
+  text-align: center;
+  scroll-margin-top: 80px;
+}
+
+.competences h2 {
+  font-size: 34px;
+  color: var(--texte);
+  margin-bottom: 40px;
+}
+
+.competences-grille {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.competence-carte {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: var(--blanc);
+  border: 1px solid var(--rose-clair);
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.competence-carte:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(201, 79, 115, 0.12);
+}
+
+.competence-entete {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.competence-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--rose-clair);
+  color: var(--rose-accent);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.competence-carte h3 {
+  color: var(--rose-profond);
+  font-size: 20px;
+}
+
+.competence-description {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.etiquettes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.competence-carte .etiquettes {
+  margin-bottom: 18px;
+}
+
+.etiquette {
+  background-color: var(--rose-clair);
+  color: var(--rose-profond);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.competence-pratique {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--rose-clair);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--rose-profond);
+}
+
+@media (max-width: 768px) {
+  .competences {
+    padding: 40px 20px;
+  }
+
+  .competences h2 {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .competences-grille {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .competence-carte {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,155 @@
+.parcours {
+  padding: 80px 60px;
+  background-color: var(--rose-clair);
+  scroll-margin-top: 80px;
+}
+
+.parcours-contenu {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 64px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.parcours-photo {
+  position: sticky;
+  top: 110px;
+}
+
+.parcours-cadre {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.parcours-cadre::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px 999px 0 0;
+  background-color: var(--rose-tendre);
+}
+
+.parcours-cadre img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 999px 999px 0 0;
+}
+
+.parcours .badge {
+  background-color: var(--blanc);
+}
+
+.parcours h2 {
+  font-size: 34px;
+  color: var(--texte);
+  margin-bottom: 32px;
+}
+
+.parcours-liste {
+  list-style: none;
+  border-top: 1px solid var(--rose-tendre);
+}
+
+.parcours-ligne {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  column-gap: 28px;
+  row-gap: 8px;
+  align-items: start;
+  padding: 28px 12px;
+  border-bottom: 1px solid var(--rose-tendre);
+  transition: background-color 0.25s;
+}
+
+.parcours-ligne:hover {
+  background-color: var(--rose-pale);
+}
+
+.parcours-date {
+  grid-row: span 2;
+}
+
+.parcours-annee {
+  display: block;
+  font-size: 44px;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--rose-accent);
+  transition: color 0.25s;
+}
+
+.parcours-ligne:hover .parcours-annee {
+  color: var(--rose-profond);
+}
+
+.parcours-periode {
+  display: block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--rose-profond);
+}
+
+.parcours-corps h3 {
+  font-size: 20px;
+  color: var(--texte);
+  margin-bottom: 4px;
+}
+
+.parcours-lieu {
+  font-size: 15px;
+  color: var(--rose-profond);
+}
+
+.parcours-description {
+  grid-column: 2;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .parcours {
+    padding: 40px 20px;
+  }
+
+  .parcours-contenu {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .parcours-photo {
+    position: static;
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  .parcours h2 {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .parcours-ligne {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+    padding: 24px 0;
+  }
+
+  .parcours-date {
+    grid-row: auto;
+  }
+
+  .parcours-description {
+    grid-column: 1;
+  }
+
+  .parcours-annee {
+    font-size: 36px;
+  }
+}

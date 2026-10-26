@@ -1,0 +1,27 @@
+:root {
+  --blanc: #FFFFFF;
+  --rose-pale: #FFF5F7;
+  --rose-clair: #FBDDE5;
+  --rose-tendre: #F2A9BF;
+  --rose-accent: #C94F73;
+  --rose-profond: #8F2D4F;
+  --texte: #3B1220;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--blanc);
+  color: var(--texte);
+}

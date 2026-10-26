@@ -1,0 +1,169 @@
+.accueil {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 60px;
+  min-height: 80vh;
+  background-color: var(--rose-pale);
+}
+
+.accueil-texte {
+  max-width: 560px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--rose-clair);
+  color: var(--rose-profond);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.accueil h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: var(--texte);
+  margin-bottom: 20px;
+}
+
+.nom {
+  color: var(--rose-accent);
+}
+
+.accroche {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.accueil-boutons {
+  display: flex;
+  gap: 16px;
+}
+
+.bouton-secondaire {
+  border: 1px solid var(--rose-accent);
+  color: var(--rose-accent);
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.bouton-secondaire:hover {
+  background-color: var(--rose-clair);
+}
+
+.photo-zone {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  flex-shrink: 0;
+}
+
+.photo-fond {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: var(--rose-tendre);
+}
+
+.photo-personne {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}photo-cercle {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background-color: var(--rose-tendre);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.photo-cercle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.technologies {
+  margin-top: 36px;
+}
+
+.technologies-titre {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--rose-profond);
+  margin-bottom: 14px;
+}
+
+.technologies-icones {
+  display: flex;
+  gap: 20px;
+  font-size: 32px;
+  color: var(--rose-accent);
+}
+
+.techno {
+  display: inline-flex;
+  transition: transform 0.2s;
+}
+
+.techno:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .accueil {
+    flex-direction: column-reverse;
+    padding: 40px 20px;
+    min-height: auto;
+    text-align: center;
+  }
+
+  .accueil-texte {
+    max-width: 100%;
+  }
+
+  .accueil h1 {
+    font-size: 34px;
+  }
+
+  .accueil-boutons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+    .photo-zone {
+    width: 300px;
+    height: 340px;
+  }
+
+  .photo-fond {
+    width: 250px;
+    height: 250px;
+  }
+
+    .technologies-icones {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 28px;
+  }
+}

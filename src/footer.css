@@ -1,0 +1,128 @@
+.footer {
+  background-color: var(--rose-profond);
+  color: var(--rose-clair);
+  padding: 64px 60px 24px;
+}
+
+.footer-principal {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.footer-nom {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--blanc);
+  margin-bottom: 14px;
+}
+
+.footer-phrase {
+  max-width: 360px;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.footer-reseaux {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-reseau {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--rose-tendre);
+  border-radius: 50%;
+  color: var(--blanc);
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.footer-reseau:hover {
+  background-color: var(--blanc);
+  color: var(--rose-profond);
+}
+
+.footer-colonne h4 {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--rose-tendre);
+  margin-bottom: 18px;
+}
+
+.footer-colonne ul {
+  list-style: none;
+}
+
+.footer-colonne li {
+  margin-bottom: 10px;
+}
+
+.footer-colonne a {
+  color: var(--rose-clair);
+  font-size: 15px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  background-image: linear-gradient(var(--blanc), var(--blanc));
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s, color 0.25s;
+}
+
+.footer-colonne a:hover {
+  color: var(--blanc);
+  background-size: 100% 1px;
+}
+
+.footer-bas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+}
+
+.footer-retour {
+  color: var(--blanc);
+  text-decoration: none;
+}
+
+.footer-retour:hover {
+  color: var(--rose-tendre);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+
+  .footer-principal {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+  }
+
+  .footer-nom {
+    font-size: 26px;
+  }
+
+  .footer-bas {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
